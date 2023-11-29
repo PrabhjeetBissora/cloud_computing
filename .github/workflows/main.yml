@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Set up Google Cloud SDK
-        uses: google-github-actions/setup-gcloud@v1.1.1
+        uses: google-github-actions/setup-gcloud@v455.0.0
         with:
           version: '341.0.0'
           project_id: ${{ secrets.GCP_PROJECT_ID }}
