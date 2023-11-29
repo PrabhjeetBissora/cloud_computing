@@ -14,6 +14,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Authenticate Docker with Google Cloud
+        run: gcloud auth configure-docker
+
       - name: Set up Google Cloud SDK
         uses: google-github-actions/setup-gcloud@v1
         with:
@@ -34,9 +37,6 @@ jobs:
     needs: build
 
     steps:
-
-      - name: Authenticate Docker with Google Cloud
-        run: gcloud auth configure-docker
 
       - name: Set up Google Cloud SDK
         uses: google-github-actions/setup-gcloud@master
