@@ -53,7 +53,7 @@ function TodoListCard() {
         <React.Fragment>
             <AddItemForm onNewItem={onNewItem} />
             {items.length === 0 && (
-                <p className="text-center">No todo items yet! Add one above!</p>
+                <p className="text-center">tjydftjyfuytfkytddysdkydtrfcdkdrckyrdt</p>
             )}
             {items.map(item => (
                 <ItemDisplay
@@ -76,7 +76,11 @@ function AddItemForm({ onNewItem }) {
     const submitNewItem = e => {
         e.preventDefault();
         setSubmitting(true);
-        fetch('/items', {
+        
+	//display add
+	console.log("Just submitted item!");
+
+	fetch('/items', {
             method: 'POST',
             body: JSON.stringify({ name: newItem }),
             headers: { 'Content-Type': 'application/json' },
@@ -111,6 +115,13 @@ function AddItemForm({ onNewItem }) {
                 </InputGroup.Append>
             </InputGroup>
         </Form>
+	
+	//print add
+	<p id="demo"></p>
+
+	<script>
+	    document.getElementById("demo").innerHTML = "Just added an item!";
+	</script>
     );
 }
 

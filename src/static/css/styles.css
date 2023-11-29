@@ -1,11 +1,11 @@
 body {
-    background-color: #f4f4f4;
+    background-color: #16f1f5;
     margin-top: 50px;
-    font-family: 'Lato';
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
 }
 
 .item {
-    background-color: white;
+    background-color: purple;
     padding: 15px;
     margin-bottom: 15px;
     border: transparent;
@@ -19,7 +19,7 @@ body {
 }
 
 .item.completed {
-    text-decoration: line-through;
+    text-decoration: underline overline;
 }
 
 .toggles {
