@@ -27,10 +27,10 @@ jobs:
                         - name: Build and push Docker image
                           run: |
                                 gcloud auth configure-docker
-                                pro_id: "mycloudproject-406613"
-                                echo "GCP_PROJECT_ID = " $pro_id
-                                docker build -t gcr.io/$pro_id/cloud_computing:latest .
-                                docker push gcr.io/$pro_id/cloud_computing:latest
+                                # pro_id: "mycloudproject-406613"
+                                # echo "GCP_PROJECT_ID = " $pro_id
+                                docker build -t gcr.io/mycloudproject-406613/cloud_computing:latest .
+                                docker push gcr.io/mycloudproject-406613/cloud_computing:latest
 
         deploy:
                 runs-on: ubuntu-latest
