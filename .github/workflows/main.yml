@@ -17,7 +17,7 @@ jobs:
                           run: gcloud auth configure-docker
 
                         - name: Set up Google Cloud SDK
-                          uses: google-github-actions/setup=gcloud@v1
+                          uses: google-github-actions/setup-gcloud@v1
                           with:
                                  version: '455.0.0'
                                  project_id: ${{ secrets.GCP_PROJECT_ID }}
